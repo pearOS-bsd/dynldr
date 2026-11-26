@@ -31,6 +31,13 @@ output as the original in black-box tests.
 | **Diagnostics** | `src/diagnose` | Reports what the machine's graphics stack can do. |
 | **Session** | `src/login`, `src/authhelper` | Login and the privileged helper. |
 
+## Frameworks
+
+`System/Library/Frameworks/` holds the 117 Mac frameworks the loader runs programs against: AppKit, Foundation,
+SwiftUI, CoreGraphics, Metal, WebKit and more, as x86_64 Mach-O binaries. They ship prebuilt and
+unchanged; this repository has no source for them yet. Their licences, and the source of their one APSL file, are in
+[`licenses/`](licenses/COPYRIGHT).
+
 ## Building
 
 The original binaries were built on Debian trixie with GCC 14. `docker/Dockerfile` sets up that environment, with the
@@ -64,4 +71,4 @@ to build them too:
 ## Licence
 
 BSD-3-Clause, as the work it is derived from. See [`LICENSE`](LICENSE) and [`NOTICE`](NOTICE).
-Third-party code in `upstream/` keeps its own licence; see [`upstream/PROVENANCE.md`](upstream/PROVENANCE.md).
+The frameworks and third-party code in `upstream/` keep their own licences; see [`licenses/COPYRIGHT`](licenses/COPYRIGHT) and see [`upstream/PROVENANCE.md`](upstream/PROVENANCE.md).
